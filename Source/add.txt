@@ -1,0 +1,30 @@
+# %%
+q25, q50, q75 = np.percentile(data_1d, [25, 50, 75])
+q10, q20, q30, q40, q50, q60, q70, q80, q90, q100 = np.percentile(data_1d, [5, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+q91, q92, q93, q94, q95, q96, q97, q98, q99, q100 = np.percentile(data_1d, [91, 92, 93, 94, 95, 96, 97, 98, 99, 100])
+print(q10, q20, q30, q40, q50, q60, q70, q80, q90, q100)
+print(q91, q92, q93, q94, q95, q96, q97, q98, q99, q100)
+# %%
+import matplotlib.pyplot as plt
+plt.figure(figsize=(20, 6))
+
+plt.hist(all_data_region.values, edgecolor='black')
+plt.xlim(0, 4) # x축 눈금 설정
+plt.rc('xtick', labelsize=24)
+plt.rc('ytick', labelsize=24)
+
+plt.title('Data Histogram')
+plt.xlabel('Data Range')
+plt.ylabel('Frequency') 
+# %%
+import matplotlib.pyplot as plt
+plt.figure(figsize=(20, 6))
+
+plt.hist(all_data.values, edgecolor='black')
+plt.xlim(0, 4) # x축 눈금 설정
+plt.rc('xtick', labelsize=24)
+plt.rc('ytick', labelsize=24)
+
+plt.title('Data Histogram')
+plt.xlabel('Data Range')
+plt.ylabel('Frequency') 
